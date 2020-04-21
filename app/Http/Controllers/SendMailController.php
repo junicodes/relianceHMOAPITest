@@ -25,7 +25,7 @@ class SendMailController extends Controller
             'message' => $request->input('message')
         ];
         try{
-            Mail::to($data['email'])->send(new PortFolioMail($data));
+            Mail::to('junicodesdev@gmail.com')->send(new PortFolioMail($data));
             return response()->json(['success' => 'Mail Sent'], 200);
         }catch(\Exception $e) {
             return response()->json(['error' => 'Mail not sent', 'info' => $e->getMessage()], 501);
