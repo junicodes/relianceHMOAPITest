@@ -17,10 +17,9 @@
     			.verifycode {
     				color: #0b273d;
     				background: white;
-    				border: 1px solid #0b273d;
     				text-align: center;
     				padding: 10px 40px 10px 40px;
-    				width: 100%;
+    				width: 90%;
     				margin: auto;
     				font-size: 15px;
     				font-weight: bold;
@@ -49,8 +48,9 @@
     			
     		</div>
     		<h2 class="welcome">Contact Mail From Junicdes PortFolio</h2>
-    		<div>
-    			 <h4>Hello from <b>---></b> {{ $data['name'] }} / {{ $data['email']}}</h4>
+    		<div style="padding: 10px;">
+    			 <h4>Hello from {{ $data['name'] }}</h4>
+				 <p>My Email: {{ $data['email']}}</p>
     		</div>
     		
     		<div>
