@@ -14,8 +14,17 @@ class CreateGamesplayedTable extends Migration
     public function up()
     {
         Schema::create('gamesplayed', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('game_id');
+            $table->unsignedBigInteger('player_id');
+            $table->unsignedBigInteger('player_1_id')->nullable();
+            $table->unsignedBigInteger('player_2_id')->nullable();
+            $table->unsignedBigInteger('player_3_id')->nullable();
+            $table->date('game_date');
             $table->timestamps();
+
+            $table->foreign('game_id')->references('id')->on('games')->onDelete('cascade');
+            $table->foreign('player_id')->references('id')->on('players')->onDelete('cascade');
         });
     }
 

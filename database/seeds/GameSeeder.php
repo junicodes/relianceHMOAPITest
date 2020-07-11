@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use app\Game;
+use Carbon\Carbon;
+use Faker\Factory as Faker;
+use App\Game;
 
 class GameSeeder extends Seeder
 {
@@ -20,12 +22,13 @@ class GameSeeder extends Seeder
             $randIndexTitle = array_rand($titles);
             $randIndexVersion = array_rand($version);
 
-            $checkVersion = Game::where('title', $titles[$randIndexTitle])->where('version', $titles[$randIndexVersion])->exist();
+            $checkVersion = Game::where('title', $titles[$randIndexTitle])->where('version', $version[$randIndexVersion])->exists();
 
             if(!$checkVersion) {
                 Game::create([
-                    'title' => trim( strtolower( $titles[$randIndexTitle] ) ),
-                    'version' => trim( strtolower( $titles[$randIndexVersion] ))
+                    'title' => trim($titles[$randIndexTitle]),
+                    'version' => $version[$randIndexVersion],
+                    'game_date' => $faker->dateTimeBetween($startDate = '-10 years', $endDate = 'now', $timezone = null)
                 ]);
             }
          }
