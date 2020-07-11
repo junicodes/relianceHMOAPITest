@@ -15,6 +15,8 @@ class CreatePlayergamesTable extends Migration
     {
         Schema::create('playergames', function (Blueprint $table) {
             $table->id();
+            $table->unsignedInteger('user_id');
+            $table->unsignedInteger('project_id');
             $table->timestamps();
         });
     }

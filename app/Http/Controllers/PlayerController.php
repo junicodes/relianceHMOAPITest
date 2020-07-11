@@ -8,13 +8,9 @@ use App\Player;
 class PlayerController extends Controller
 {
 
-    public function getOnePlayer() {
+    public function getAllPlayers() {
 
-    }
-
-    public function getAllPlayers(Player $players) {
-
-        $players->paginate(10);
+        $players = Player::paginate(10);
 
         $res['status'] = true;
         $res['players'] = $players;
