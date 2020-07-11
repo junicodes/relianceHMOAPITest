@@ -28,7 +28,15 @@ php artisan db:seed --class=GamePlayedSeeder
 
 ## Local Setup
 To run the application locally
-Firstly clone the project from github and 
+
+Firstly:
+
+clone the project from github
+Run -> composer update 
+to get the dependencies and dev dependencies
+
+Secondly:
+Then run -> php artisan serve 
 
 
 ## Security Vulnerabilities
