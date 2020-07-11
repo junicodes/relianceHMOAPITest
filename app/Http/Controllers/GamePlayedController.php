@@ -22,7 +22,18 @@ class GamePlayedController extends Controller
         $res['games_played'] = $games_played;
         return response()->json($res, 200);
     }
-    // public function getAllGamesPlayedWithDateRange() {
-    //     $data = GamePlayed::pagina
-    // }
+    public function getAllGamesPlayedWithDateRange($startdate, $enddate) {
+
+        $data = GamePlayed::whereBetween('game_date', 
+                [$startdate, $enddate])
+                ->with('player')
+                ->with('player_1')
+                ->with('player_2')
+                ->with('player_3')
+                ->paginate(100);
+                
+        $res['status'] = true;
+        $res['games_played_with_date'] = $data;
+        return response()->json($res, 200);
+    }
 }
