@@ -25,6 +25,9 @@ class CreateGamesplayedTable extends Migration
 
             $table->foreign('game_id')->references('id')->on('games')->onDelete('cascade');
             $table->foreign('player_id')->references('id')->on('players')->onDelete('cascade');
+            $table->foreign('player_1_id')->references('id')->on('players')->onDelete('cascade');
+            $table->foreign('player_2_id')->references('id')->on('players')->onDelete('cascade');
+            $table->foreign('player_3_id')->references('id')->on('players')->onDelete('cascade');
         });
     }
 

@@ -18,7 +18,7 @@ class GameSeeder extends Seeder
         $titles = ["Call of Duty", "Mortal Kombat", "FIFA", "Just Cause", "Apex Legend"];
         $version = ['v1', 'v2', 'v3', 'v4', 'v5', 'v6', 'v7', 'v8', 'v9', 'v10'];
         
-        for($i = 0; $i < 500; $i++) {
+        for($i = 0; $i < 5000; $i++) {
             $randIndexTitle = array_rand($titles);
             $randIndexVersion = array_rand($version);
 
