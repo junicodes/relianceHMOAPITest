@@ -22,4 +22,7 @@ class GamePlayedController extends Controller
         $res['games_played'] = $games_played;
         return response()->json($res, 200);
     }
+    // public function getAllGamesPlayedWithDateRange() {
+    //     $data = GamePlayed::pagina
+    // }
 }

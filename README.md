@@ -6,8 +6,15 @@
 This api Documentation is found at Postman 
 https://documenter.getpostman.com/view/6843654/T17M86VK
 
+## API HOSTING AND LINK
+https://mygameapi.herokuapp.com/
+
+
 ## Important Note 
-To generate faker data
+To generate faker data form the code run this below in your local machine
+php artisan db:seed --class=PlayerTableSeeder
+php artisan db:seed --class=GameSeeder
+php artisan db:seed --class=PlayerTableSeeder
 
 
 ## Security Vulnerabilities
