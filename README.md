@@ -9,12 +9,26 @@ https://documenter.getpostman.com/view/6843654/T17M86VK
 ## API HOSTING AND LINK
 https://mygameapi.herokuapp.com/
 
+## Hosting Database
+ClearDB
 
 ## Important Note 
 To generate faker data form the code run this below in your local machine
+Firstly run the player table seeder
 php artisan db:seed --class=PlayerTableSeeder
+
+Secoundly run the game seeder
 php artisan db:seed --class=GameSeeder
-php artisan db:seed --class=PlayerTableSeeder
+
+Thirdly run the Player Game seeder
+php artisan db:seed --class=PlayerGameSeeder
+
+Fourthly Run the GamedPlayed seeder
+php artisan db:seed --class=GamePlayedSeeder
+
+## Local Setup
+To run the application locally
+Firstly clone the project from github and 
 
 
 ## Security Vulnerabilities
